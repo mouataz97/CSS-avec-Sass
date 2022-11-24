@@ -1,0 +1,79 @@
+/*function hierarchy*/
+.nav {
+    padding-right: 6rem;
+    flex: 2 1 auto;
+    text-align: right;
+    nav__link {
+        display: inline;
+        font-size: 3rem;
+        padding-left: 1.5rem;
+        nav__link--active {
+            color: #001534;;
+        }
+    }
+}
+
+/* nest */
+ul {
+    list-style: none;
+    text-align: right;
+    li {
+        display: inline;
+        font-size: 3rem;
+        color: #D6FFF5;
+    }
+}
+
+.parent {
+    background-color: #15DEA5;
+}
+
+.parent .descendant {
+    color: #fff;
+}
+
+.parent > .child {
+    color: #D6FFF5;
+}
+
+.parent + .adjacent {
+    color: #001534;
+}
+
+/* 
+In the first case, anything related to the parent element will take on the designated background color. 
+
+In the second case, if the second element is the descendant of the first element, then it will have the specified color. 
+
+In the third case, if the second element is a child of the first element, it'll have the designated color. 
+
+In the fourth case, if the second element is immediately preceded by the first, it'll have the supplied color. 
+*/
+
+.parent {
+    background-color: #15DEA5;
+    .descendant {
+        color: #fff;
+    }
+    >.child {
+        color: #D6FFF5;
+    }
+    +.adjacent {
+        color: #001534;
+    }
+}
+
+/* (&) will directly join it to the parent selector without any combinators*/
+
+ul {
+    list-style: none;
+    text-align: right;
+        li {
+            display: inline;
+            font-size: 3rem;
+            color: #D6FFF5;
+            &:hover {
+                color: #001534;
+            }
+        }
+}

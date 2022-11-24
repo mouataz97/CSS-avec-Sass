@@ -1,0 +1,38 @@
+.block{
+    background-color: #15DEA5;
+    .block__element {
+        color: #fff;
+    }
+    .block__element--modifier {
+        background-color: #001534;
+    }
+}
+
+/* with combining BEM like :*/
+
+.block{
+    background-color: #15DEA5;
+    &__element {
+        color: #fff;
+            &--modifier {
+                background-color: #001534;
+    }
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin: 0 auto;
+    background: #15DEA5;
+    padding: 1rem;
+    &--disabled {
+        background: grey;
+    }
+    &--outline {
+        background: transparent;
+        border: 2px solid #15DEA5;
+        &.btn--disabled{
+            border: 2px solid grey;
+        }
+    }
+}
