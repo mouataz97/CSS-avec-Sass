@@ -1,0 +1,40 @@
+@mixin typography {
+    color: $colour-primary;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+h1 {
+    @include typography;
+  }
+  textarea {
+      @include typography;
+  }
+
+/* extend uses for classes */
+.typography {
+    color: $colour-primary;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+button {
+    @extend typography;
+}
+input {
+    @extend typography;
+}
+
+/* prevent unused selectors in your codebase */
+%typography {
+    color: $colour-primary;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+h1 {
+  @extend %typography;
+}

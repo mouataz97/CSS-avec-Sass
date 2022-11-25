@@ -1,0 +1,27 @@
+/* Variables calling only workson content*/
+$heading-shadow: 0.55rem 0.55rem #15DEA5;
+
+/* Full calling you can store everything*/
+@mixin heading-shadow {
+    text-shadow: 0.55rem 0.55rem #15DEA5;
+}
+
+/* More specyfied */
+$coulour : #15DEA5;
+@mixin heading-shadow($colour){
+    text-shadow: .55rem .55rem $colour;
+}
+
+.heading__header {
+    text-shadow: 0.55rem 0.55rem #fff;
+}
+.form__heading {
+    text-shadow: 0.55rem 0.55rem #15DEA5;
+}
+.about__heading {
+    text-shadow: $heading-shadow;
+}
+.project__heading {
+    @include heading-shadow;
+}
+
