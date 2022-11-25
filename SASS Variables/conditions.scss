@@ -1,4 +1,5 @@
-@mixin heading-shadow($colour: $colour-primary, $size: $heading-shadow-size){
+@mixin heading-shadow($colour: $colour-primary, $size: $heading-shadow-size)
+{
     @if ( lightness($colour) < 25% ) {
         $colour: lighten($colour, 10%);
     }@else{
@@ -11,4 +12,4 @@
     &__heading {
         @include heading-shadow($colour-secondary);
     }
-}
+}   
