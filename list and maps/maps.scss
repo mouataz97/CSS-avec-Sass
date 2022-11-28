@@ -1,0 +1,46 @@
+$font-size: 7rem 5rem 4rem 2rem;
+
+.form{
+    &__field {
+        & label {
+            font-size: nth($font-size, 4);
+        }
+    }
+}
+
+$font-size: (logo:7rem, heading:5rem, project-heading:4rem, label:2rem);
+
+.form{
+    &__field {
+        & label {
+            font-size: map-get($font-size, label);
+        }
+    }
+}
+
+/* Advanced maping */
+$colour-primary: #15DEA5;
+$colour-secondary: #001534;
+$colour-accent: #D6FFF5;
+$colour-white: #fff;
+$colour-invalid: #DB464B;
+
+$txt-input-palette: (
+    active: (
+        bg: $colour-primary,
+        border: $colour-primary,
+        txt: $colour-white,
+    ),
+    focus: (
+        bg: $colour-primary,
+        border: $colour-primary,
+        txt: $colour-white,
+    ),
+    invalid: (
+        bg: $colour-invalid,
+        border: $colour-white,
+        txt: $colour-white,
+    )
+);
+
+/* call each precisely*/
