@@ -1,0 +1,26 @@
+$padding-dimensions: 1rem 2rem 3rem 4rem;
+
+.block {
+    padding: $padding-dimensions;
+}
+
+$syntax-01: 1rem 2rem 3rem 4rem;
+
+$syntax-02: 1rem, 2rem, 3rem, 4rem;
+
+$syntax-03: (1rem 2rem 3rem 4rem);
+
+$syntax-04: (1rem, 2rem, 3rem, 4rem);
+
+.syntax-01 {
+    padding: $syntax-01;
+}
+.syntax-02 {
+    padding: $syntax-02;
+}
+.syntax-03 {
+    padding: $syntax-03;
+}
+.syntax-04 {
+    padding: $syntax-04;
+}
