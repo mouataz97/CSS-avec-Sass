@@ -1,0 +1,29 @@
+.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+
+/* installing prefixes */
+
+//npm install autoprefixer postcss postcss-cli -g
+//npm run prefix
+
+.header {
+    background: #15DEA5;
+    height: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .article__heading--/*colour name goes here*/ {
+    color:/*colour values goes here*/;
+} 
