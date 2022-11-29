@@ -1,0 +1,43 @@
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        grid-template-columns: 1fr;
+    }
+}
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include mobile-only;
+}
+
+/* @content */
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include mobile-only{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Replacing content with codes for more details */
+
+$font-size: (
+    logo:7rem, 
+    quote: 6rem,
+    heading:5rem, 
+    project-heading:4rem, 
+    label:2rem);
+
+.quote {
+    font-size: map-get(font-size, quote);
+    @include mobile-only {
+        font-size: map-get(font-size, quote)*0.4;
+    }
+}
