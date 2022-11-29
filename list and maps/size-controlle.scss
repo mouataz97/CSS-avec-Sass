@@ -1,0 +1,52 @@
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 599px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* mobile version of the project preview grid-template-columns */
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        grid-template-columns: 1fr;
+    }
+}
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include mobile-only;
+}
+
+/* @conent, you can add a set of curly braces to instances of the mixin to contain the content*/
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include mobile-only{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* adjusting the content to fit the phone*/
+
+$font-size: (
+    logo:7rem, 
+    quote: 6rem,
+    heading:5rem, 
+    project-heading:4rem, 
+    label:2rem);
+
+.quote {
+    font-size: map-get(font-size, quote);
+    @include mobile-only {
+        font-size: map-get(font-size, quote)*0.4;
+    }
